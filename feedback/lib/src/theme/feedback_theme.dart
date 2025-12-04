@@ -32,19 +32,74 @@ const _defaultBottomSheetTextInputStyle = TextStyle(
 class FeedbackThemeData {
   /// Creates a [FeedbackThemeData].
   /// ![Theme](https://raw.githubusercontent.com/ueman/feedback/master/img/theme_description.png "Theme")
-  FeedbackThemeData(
-      {this.background = Colors.grey,
-      this.feedbackSheetColor = _lightGrey,
-      this.feedbackSheetHeight = .25,
-      this.activeFeedbackModeColor = _blue,
-      this.drawColors = _defaultDrawColors,
-      this.bottomSheetDescriptionStyle = _defaultBottomSheetDescriptionStyle,
-      this.bottomSheetTextInputStyle = _defaultBottomSheetTextInputStyle,
-      this.sheetIsDraggable = true,
-      Brightness? brightness,
-      Color? dragHandleColor,
-      ColorScheme? colorScheme})
-      :
+  FeedbackThemeData({
+    this.background = Colors.grey,
+    this.feedbackSheetColor = _lightGrey,
+    this.feedbackSheetHeight = .25,
+    this.activeFeedbackModeColor = _blue,
+    this.drawColors = _defaultDrawColors,
+    this.bottomSheetDescriptionStyle = _defaultBottomSheetDescriptionStyle,
+    this.bottomSheetTextInputStyle = _defaultBottomSheetTextInputStyle,
+    this.sheetIsDraggable = true,
+    Brightness? brightness,
+    Color? dragHandleColor,
+    ColorScheme? colorScheme,
+    // Material Theme customization fields
+    this.primaryColor,
+    this.primaryColorLight,
+    this.primaryColorDark,
+    this.scaffoldBackgroundColor,
+    this.canvasColor,
+    this.cardColor,
+    this.dividerColor,
+    this.focusColor,
+    this.hoverColor,
+    this.highlightColor,
+    this.splashColor,
+    this.selectedRowColor,
+    this.unselectedWidgetColor,
+    this.disabledColor,
+    this.buttonTheme,
+    this.toggleButtonsTheme,
+    this.appBarTheme,
+    this.textTheme,
+    this.primaryTextTheme,
+    this.inputDecorationTheme,
+    this.iconTheme,
+    this.primaryIconTheme,
+    this.sliderTheme,
+    this.tabBarTheme,
+    this.tooltipTheme,
+    this.cardTheme,
+    this.chipTheme,
+    this.materialTapTargetSize,
+    this.pageTransitionsTheme,
+    this.bottomAppBarTheme,
+    this.dialogTheme,
+    this.floatingActionButtonTheme,
+    this.navigationBarTheme,
+    this.navigationRailTheme,
+    this.snackBarTheme,
+    this.bottomSheetTheme,
+    this.popupMenuTheme,
+    this.bannerTheme,
+    this.dividerTheme,
+    this.listTileTheme,
+    this.badgeTheme,
+    this.bottomNavigationBarTheme,
+    this.checkboxTheme,
+    this.radioTheme,
+    this.switchTheme,
+    this.progressIndicatorTheme,
+    this.drawerTheme,
+    this.dataTableTheme,
+    this.dropdownMenuTheme,
+    this.searchBarTheme,
+    this.searchViewTheme,
+    this.segmentedButtonTheme,
+    this.useMaterial3,
+    this.visualDensity,
+  })  :
         // if the user chooses to supply custom drawing colors,
         // make sure there is at least on color to draw with
         assert(
@@ -127,6 +182,169 @@ class FeedbackThemeData {
   /// [ColorScheme] on the feedback UI
   late final ColorScheme colorScheme;
 
+  // Material Theme customization fields
+  /// Primary color of the theme
+  final Color? primaryColor;
+
+  /// Light variant of the primary color
+  final Color? primaryColorLight;
+
+  /// Dark variant of the primary color
+  final Color? primaryColorDark;
+
+  /// Background color for scaffold
+  final Color? scaffoldBackgroundColor;
+
+  /// Canvas color
+  final Color? canvasColor;
+
+  /// Card color
+  final Color? cardColor;
+
+  /// Divider color
+  final Color? dividerColor;
+
+  /// Focus color
+  final Color? focusColor;
+
+  /// Hover color
+  final Color? hoverColor;
+
+  /// Highlight color
+  final Color? highlightColor;
+
+  /// Splash color
+  final Color? splashColor;
+
+  /// Selected row color
+  final Color? selectedRowColor;
+
+  /// Unselected widget color
+  final Color? unselectedWidgetColor;
+
+  /// Disabled color
+  final Color? disabledColor;
+
+  /// Button theme
+  final ButtonThemeData? buttonTheme;
+
+  /// Toggle buttons theme
+  final ToggleButtonsThemeData? toggleButtonsTheme;
+
+  /// App bar theme
+  final AppBarTheme? appBarTheme;
+
+  /// Text theme
+  final TextTheme? textTheme;
+
+  /// Primary text theme
+  final TextTheme? primaryTextTheme;
+
+  /// Input decoration theme
+  final InputDecorationTheme? inputDecorationTheme;
+
+  /// Icon theme
+  final IconThemeData? iconTheme;
+
+  /// Primary icon theme
+  final IconThemeData? primaryIconTheme;
+
+  /// Slider theme
+  final SliderThemeData? sliderTheme;
+
+  /// Tab bar theme
+  final TabBarTheme? tabBarTheme;
+
+  /// Tooltip theme
+  final TooltipThemeData? tooltipTheme;
+
+  /// Card theme
+  final CardTheme? cardTheme;
+
+  /// Chip theme
+  final ChipThemeData? chipTheme;
+
+  /// Material tap target size
+  final MaterialTapTargetSize? materialTapTargetSize;
+
+  /// Page transitions theme
+  final PageTransitionsTheme? pageTransitionsTheme;
+
+  /// Bottom app bar theme
+  final BottomAppBarTheme? bottomAppBarTheme;
+
+  /// Dialog theme
+  final DialogTheme? dialogTheme;
+
+  /// Floating action button theme
+  final FloatingActionButtonThemeData? floatingActionButtonTheme;
+
+  /// Navigation bar theme
+  final NavigationBarThemeData? navigationBarTheme;
+
+  /// Navigation rail theme
+  final NavigationRailThemeData? navigationRailTheme;
+
+  /// Snack bar theme
+  final SnackBarThemeData? snackBarTheme;
+
+  /// Bottom sheet theme
+  final BottomSheetThemeData? bottomSheetTheme;
+
+  /// Popup menu theme
+  final PopupMenuThemeData? popupMenuTheme;
+
+  /// Banner theme
+  final MaterialBannerThemeData? bannerTheme;
+
+  /// Divider theme
+  final DividerThemeData? dividerTheme;
+
+  /// List tile theme
+  final ListTileThemeData? listTileTheme;
+
+  /// Badge theme
+  final BadgeThemeData? badgeTheme;
+
+  /// Bottom navigation bar theme
+  final BottomNavigationBarThemeData? bottomNavigationBarTheme;
+
+  /// Checkbox theme
+  final CheckboxThemeData? checkboxTheme;
+
+  /// Radio theme
+  final RadioThemeData? radioTheme;
+
+  /// Switch theme
+  final SwitchThemeData? switchTheme;
+
+  /// Progress indicator theme
+  final ProgressIndicatorThemeData? progressIndicatorTheme;
+
+  /// Drawer theme
+  final DrawerThemeData? drawerTheme;
+
+  /// Data table theme
+  final DataTableThemeData? dataTableTheme;
+
+  /// Dropdown menu theme
+  final DropdownMenuThemeData? dropdownMenuTheme;
+
+  /// Search bar theme
+  final SearchBarThemeData? searchBarTheme;
+
+  /// Search view theme
+  final SearchViewThemeData? searchViewTheme;
+
+  /// Segmented button theme
+  final SegmentedButtonThemeData? segmentedButtonTheme;
+
+  /// Use Material 3 design
+  final bool? useMaterial3;
+
+  /// Visual density
+  final VisualDensity? visualDensity;
+
   /// Creates a copy of the current [FeedbackThemeData] with the given
   /// optional fields replaced with the given values.
   FeedbackThemeData copyWith({
@@ -141,6 +359,60 @@ class FeedbackThemeData {
     Color? dragHandleColor,
     Brightness? brightness,
     ColorScheme? colorScheme,
+    Color? primaryColor,
+    Color? primaryColorLight,
+    Color? primaryColorDark,
+    Color? scaffoldBackgroundColor,
+    Color? canvasColor,
+    Color? cardColor,
+    Color? dividerColor,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? highlightColor,
+    Color? splashColor,
+    Color? selectedRowColor,
+    Color? unselectedWidgetColor,
+    Color? disabledColor,
+    ButtonThemeData? buttonTheme,
+    ToggleButtonsThemeData? toggleButtonsTheme,
+    AppBarTheme? appBarTheme,
+    TextTheme? textTheme,
+    TextTheme? primaryTextTheme,
+    InputDecorationTheme? inputDecorationTheme,
+    IconThemeData? iconTheme,
+    IconThemeData? primaryIconTheme,
+    SliderThemeData? sliderTheme,
+    TabBarTheme? tabBarTheme,
+    TooltipThemeData? tooltipTheme,
+    CardTheme? cardTheme,
+    ChipThemeData? chipTheme,
+    MaterialTapTargetSize? materialTapTargetSize,
+    PageTransitionsTheme? pageTransitionsTheme,
+    BottomAppBarTheme? bottomAppBarTheme,
+    DialogTheme? dialogTheme,
+    FloatingActionButtonThemeData? floatingActionButtonTheme,
+    NavigationBarThemeData? navigationBarTheme,
+    NavigationRailThemeData? navigationRailTheme,
+    SnackBarThemeData? snackBarTheme,
+    BottomSheetThemeData? bottomSheetTheme,
+    PopupMenuThemeData? popupMenuTheme,
+    MaterialBannerThemeData? bannerTheme,
+    DividerThemeData? dividerTheme,
+    ListTileThemeData? listTileTheme,
+    BadgeThemeData? badgeTheme,
+    BottomNavigationBarThemeData? bottomNavigationBarTheme,
+    CheckboxThemeData? checkboxTheme,
+    RadioThemeData? radioTheme,
+    SwitchThemeData? switchTheme,
+    ProgressIndicatorThemeData? progressIndicatorTheme,
+    DrawerThemeData? drawerTheme,
+    DataTableThemeData? dataTableTheme,
+    DropdownMenuThemeData? dropdownMenuTheme,
+    SearchBarThemeData? searchBarTheme,
+    SearchViewThemeData? searchViewTheme,
+    SegmentedButtonThemeData? segmentedButtonTheme,
+    bool? useMaterial3,
+    VisualDensity? visualDensity,
   }) {
     return FeedbackThemeData(
       background: background ?? this.background,
@@ -157,6 +429,68 @@ class FeedbackThemeData {
       dragHandleColor: dragHandleColor ?? this.dragHandleColor,
       brightness: brightness ?? this.brightness,
       colorScheme: colorScheme ?? this.colorScheme,
+      primaryColor: primaryColor ?? this.primaryColor,
+      primaryColorLight: primaryColorLight ?? this.primaryColorLight,
+      primaryColorDark: primaryColorDark ?? this.primaryColorDark,
+      scaffoldBackgroundColor:
+          scaffoldBackgroundColor ?? this.scaffoldBackgroundColor,
+      canvasColor: canvasColor ?? this.canvasColor,
+      cardColor: cardColor ?? this.cardColor,
+      dividerColor: dividerColor ?? this.dividerColor,
+      focusColor: focusColor ?? this.focusColor,
+      hoverColor: hoverColor ?? this.hoverColor,
+      highlightColor: highlightColor ?? this.highlightColor,
+      splashColor: splashColor ?? this.splashColor,
+      selectedRowColor: selectedRowColor ?? this.selectedRowColor,
+      unselectedWidgetColor:
+          unselectedWidgetColor ?? this.unselectedWidgetColor,
+      disabledColor: disabledColor ?? this.disabledColor,
+      buttonTheme: buttonTheme ?? this.buttonTheme,
+      toggleButtonsTheme: toggleButtonsTheme ?? this.toggleButtonsTheme,
+      appBarTheme: appBarTheme ?? this.appBarTheme,
+      textTheme: textTheme ?? this.textTheme,
+      primaryTextTheme: primaryTextTheme ?? this.primaryTextTheme,
+      inputDecorationTheme: inputDecorationTheme ?? this.inputDecorationTheme,
+      iconTheme: iconTheme ?? this.iconTheme,
+      primaryIconTheme: primaryIconTheme ?? this.primaryIconTheme,
+      sliderTheme: sliderTheme ?? this.sliderTheme,
+      tabBarTheme: tabBarTheme ?? this.tabBarTheme,
+      tooltipTheme: tooltipTheme ?? this.tooltipTheme,
+      cardTheme: cardTheme ?? this.cardTheme,
+      chipTheme: chipTheme ?? this.chipTheme,
+      materialTapTargetSize:
+          materialTapTargetSize ?? this.materialTapTargetSize,
+      pageTransitionsTheme:
+          pageTransitionsTheme ?? this.pageTransitionsTheme,
+      bottomAppBarTheme: bottomAppBarTheme ?? this.bottomAppBarTheme,
+      dialogTheme: dialogTheme ?? this.dialogTheme,
+      floatingActionButtonTheme:
+          floatingActionButtonTheme ?? this.floatingActionButtonTheme,
+      navigationBarTheme: navigationBarTheme ?? this.navigationBarTheme,
+      navigationRailTheme: navigationRailTheme ?? this.navigationRailTheme,
+      snackBarTheme: snackBarTheme ?? this.snackBarTheme,
+      bottomSheetTheme: bottomSheetTheme ?? this.bottomSheetTheme,
+      popupMenuTheme: popupMenuTheme ?? this.popupMenuTheme,
+      bannerTheme: bannerTheme ?? this.bannerTheme,
+      dividerTheme: dividerTheme ?? this.dividerTheme,
+      listTileTheme: listTileTheme ?? this.listTileTheme,
+      badgeTheme: badgeTheme ?? this.badgeTheme,
+      bottomNavigationBarTheme:
+          bottomNavigationBarTheme ?? this.bottomNavigationBarTheme,
+      checkboxTheme: checkboxTheme ?? this.checkboxTheme,
+      radioTheme: radioTheme ?? this.radioTheme,
+      switchTheme: switchTheme ?? this.switchTheme,
+      progressIndicatorTheme:
+          progressIndicatorTheme ?? this.progressIndicatorTheme,
+      drawerTheme: drawerTheme ?? this.drawerTheme,
+      dataTableTheme: dataTableTheme ?? this.dataTableTheme,
+      dropdownMenuTheme: dropdownMenuTheme ?? this.dropdownMenuTheme,
+      searchBarTheme: searchBarTheme ?? this.searchBarTheme,
+      searchViewTheme: searchViewTheme ?? this.searchViewTheme,
+      segmentedButtonTheme:
+          segmentedButtonTheme ?? this.segmentedButtonTheme,
+      useMaterial3: useMaterial3 ?? this.useMaterial3,
+      visualDensity: visualDensity ?? this.visualDensity,
     );
   }
 }
